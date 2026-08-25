@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domicilios | Theo Burger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-layout">
+      <section class="page-card">
+        <div class="page-head">
+          <div>
+            <p class="eyebrow">PEDIDO DESDE CASA</p>
+            <h1>Domicilio por WhatsApp</h1>
+            <p>El cliente llena sus datos, escoge productos y se abre WhatsApp con el mensaje listo para enviar al restaurante.</p>
+          </div>
+          <a class="back-link" href="index.html">Volver al inicio</a>
+        </div>
+
+        <form id="deliveryForm" class="form-grid">
+          <div>
+            <label for="name">Nombre completo</label>
+            <input id="name" name="name" required />
+          </div>
+
+          <div>
+            <label for="phone">Número telefónico</label>
+            <input id="phone" name="phone" required />
+          </div>
+
+          <div>
+            <label for="address">Dirección</label>
+            <input id="address" name="address" required />
+          </div>
+
+          <div>
+            <label for="payment">Medio de pago</label>
+            <select id="payment" name="payment" required></select>
+          </div>
+
+          <div style="grid-column: 1 / -1;">
+            <label for="notes">Notas del pedido (opcional)</label>
+            <textarea id="notes" name="notes" placeholder="Ejemplo: sin cebolla, timbrar al llegar..."></textarea>
+          </div>
+        </form>
+
+        <h2 style="margin: 18px 0 8px;">Selecciona productos</h2>
+        <div id="deliveryMenu" class="grid"></div>
+
+        <h2 style="margin: 20px 0 8px;">Resumen del pedido</h2>
+        <ul id="deliveryLines" class="order-lines"></ul>
+        <p id="deliveryTotal" class="price">Total: $0</p>
+
+        <div class="cta-row">
+          <button id="sendDeliveryOrder" type="button">Enviar pedido por WhatsApp</button>
+          <button id="clearDeliveryOrder" type="button" class="secondary">Limpiar selección</button>
+        </div>
+
+        <p class="note">
+          Configura el número de WhatsApp del restaurante en el archivo app.js dentro de la constante RESTAURANT_WHATSAPP.
+        </p>
+      </section>
+    </main>
+
+    <script src="menu-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

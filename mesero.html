@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel Mesero | Theo Burger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-layout">
+      <section class="page-card">
+        <div class="page-head">
+          <div>
+            <p class="eyebrow">SISTEMA INTERNO</p>
+            <h1>Panel Móvil de Meseros</h1>
+            <p>Selecciona productos por mesa y genera una comanda visual con total.</p>
+          </div>
+          <a class="back-link" href="index.html">Volver al inicio</a>
+        </div>
+
+        <form id="waiterMetaForm" class="form-grid">
+          <div>
+            <label for="tableNumber">Mesa</label>
+            <input id="tableNumber" placeholder="Ej: 8" required />
+          </div>
+          <div>
+            <label for="customerName">Nombre cliente (opcional)</label>
+            <input id="customerName" placeholder="Ej: Laura" />
+          </div>
+        </form>
+
+        <h2 style="margin: 18px 0 8px;">Selecciona pedido</h2>
+        <div id="waiterMenu" class="grid"></div>
+
+        <h2 style="margin: 20px 0 8px;">Items seleccionados</h2>
+        <ul id="waiterLines" class="order-lines"></ul>
+        <p id="waiterTotal" class="price">Total: $0</p>
+
+        <div class="cta-row">
+          <button id="buildTicket" type="button">Generar comanda</button>
+          <button id="clearWaiterOrder" type="button" class="secondary">Limpiar</button>
+        </div>
+
+        <article id="ticket" class="ticket" hidden></article>
+      </section>
+    </main>
+
+    <script src="menu-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

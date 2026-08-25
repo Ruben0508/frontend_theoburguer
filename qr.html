@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Menú | Theo Burger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-layout">
+      <section class="page-card">
+        <div class="page-head">
+          <div>
+            <p class="eyebrow">CÓDIGO QR</p>
+            <h1>QR exclusivo del Menú</h1>
+            <p>Este QR debe apuntar a la URL pública de menu.html para que el cliente solo vea el menú.</p>
+          </div>
+          <a class="back-link" href="index.html">Volver al inicio</a>
+        </div>
+
+        <div class="form-grid">
+          <div style="grid-column: 1 / -1;">
+            <label for="menuUrl">https://famous-churros-da0990.netlify.app/menu.html</label>
+            <input id="menuUrl" placeholder="https://tudominio.com/menu.html" />
+          </div>
+        </div>
+
+        <div class="cta-row" style="margin-top: 10px;">
+          <button id="generateQr" type="button">Generar QR</button>
+        </div>
+
+        <div class="qr-wrap" style="margin-top: 16px;">
+          <img id="qrImage" alt="Código QR del menú" />
+          <p id="qrInfo" class="note"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
